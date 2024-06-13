@@ -1,0 +1,63 @@
+//########################################################################################//
+
+/*
+Name:         GulamMustafa Ibrahim Kazi.
+Date:         16/10/2023
+Description:  'C' code to check given number is even, odd or zero. Also the number is positive or negative.
+
+Sample input:  Enter the value of 'n' : -2
+
+Sample output: -2 is negative even number
+doc
+*/
+
+//########################################################################################//
+
+#include<stdio.h>
+
+int main()
+{
+    int num; //Declare variable type as integer.
+    
+    //To print the meassage when proggram runs.
+    printf("Enter the value of 'n': ");
+
+    //To read the integer value from the user.
+    scanf("%d", &num);
+
+    //Condition to check given number is zero or not.
+    if(num != 0)
+    {
+	//To check given number is even or odd modulus it by 2.
+	//If the modulus is zero then it is Even number, else it is Odd number.
+	if(num % 2 == 0)
+	{
+	    if(num > 0) //To check the number is positive or negative.
+	    {
+		printf("%d is positive even number\n", num);
+	    }
+	    else
+	    {
+		printf("%d is negative even number\n", num);
+	    }
+	}
+	else
+	{
+	    if(num > 0)
+	    {
+		printf("%d is positive odd number\n", num);
+	    }
+	    else
+	    {
+		printf("%d is negative odd number\n", num);
+	    }
+	}
+    }
+    else
+    {
+	//To print the messege if given number is zero.
+    	printf("%d is neither odd nor even\n",num);
+    }
+
+    return 0;
+}
